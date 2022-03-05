@@ -1,6 +1,9 @@
 // RESET
 // Smooths out the rough edges across browsers
-@use './tools/normalize';
+@use './tools/normalize'; /* @ manes bring in all the file */
+@use 'node_modules/leaflet/dist/leaflet';
+@use 'node_modules/leaflet-minimap/src/Control.MiniMap';
+@use './map';
 
 // VARIABLES
 // Reusable settings
@@ -71,13 +74,12 @@ div.graphics-container {
   display: flex;
   justify-content: space-between;
   @media (max-width: 500px) {
-    /*when the browser is larger than 500px*/
+    /*when the browser is larger than 500px, usually for phones*/
     display: block;
   }
   div.graphic {
     flex: 0 1 48%;
     @media (max-width: 500px) {
-      /*when the browser is larher than 500px*/
       display: block;
       margin-bottom: 15px;
     }

@@ -10,7 +10,7 @@
 
 {% extends '_layouts/base.html' %}
 
-{% block headline %}Headline{% endblock headline%}
+{% block headline %}A South L.A. neighborhood grapples with a wave of violence{% endblock headline%}
 {% block byline %}byline goes here{% endblock byline%}
 {% block pubdate %}
   <time datetime="2022-03-05" pubdate>Mar. 5, 2022</time>
@@ -18,6 +18,14 @@
 
 {% block content %}
 
+<!-- the map -->
+<section>
+  <h3>One corner. Four killings</h3>
+  <p>The southwest corner of Harvard Park, at West 62nd Street and Harvard Boulevard, has been especially deadly. In the last year-and-a-half, four men have been killed there — while sitting in a car, trying to defuse an argument or walking home from the barber shop or the corner store.</p>
+  <div id="map"></div>
+</section>
+
+<!-- this is the chart section -->
 <section>
   <h3>A South L.A. neighborhood stands apart</h3>
   <p>
@@ -26,7 +34,16 @@
   </p>
   <div class="graphics-container">
     <div class="graphic">
-      <iframe title="County homicides, 2000-2017" aria-label="Column Chart" id="datawrapper-chart-F3WiL" src="https://datawrapper.dwcdn.net/F3WiL/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="350"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+      <iframe title="County homicides, 2000-2017" 
+              aria-label="Column Chart" 
+              id="datawrapper-chart-F3WiL" 
+              src="https://datawrapper.dwcdn.net/F3WiL/3/" 
+              scrolling="no" 
+              frameborder="0" 
+              style="width: 0; min-width: 100% !important; border: none;" 
+              height="350"></iframe>
+      <script type="text/javascript">!function(){"use strict";
+              window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
       </script><!-- first graphic’s embed code goes here -->
     </div>
     <div class="graphic">
@@ -36,7 +53,7 @@
   </div>
 </section>
 
-
+<!-- this is the gallery section -->
 <section>
   <h3>Lives lost in Harvard Park</h3>
   <p>The {{ harvard_park_homicides|length }} homicides in Harvard Park since 2000 were primarily black and Latino males, but the list includes husbands, wives, fathers, mothers of all ages, and even some small children.</p>
