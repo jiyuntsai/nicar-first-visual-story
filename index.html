@@ -12,8 +12,13 @@
 
 {% block headline %}Headline{% endblock headline%}
 {% block byline %}byline goes here{% endblock byline%}
-{% block pubdate %}<time datetime="2022-03-05" pubdate>Mar. 5, 2022</time>{% endblock pubdate%}
+{% block pubdate %}
+  <time datetime="2022-03-05" pubdate>Mar. 5, 2022</time>
+{% endblock pubdate%}
 
 {% block content %}
-<p>Hello World! WEEEEEEEEEEE!</p>
+{% for obj in harvard_park_homicides %} <!-- for every object in the list, do the following thing, which is print the objects. -->
+  {{ obj.first_name }} {{ obj.last_name }}<br/> <!-- the space is for the space between first name and last name -->
+{% endfor %}
 {% endblock content %}
+
